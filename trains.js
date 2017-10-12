@@ -1,15 +1,8 @@
-/* global firebase moment */
-// Steps to complete:
 
-// 1. Initialize Firebase
-// 2. Create button for adding new employees - then update the html + update the database
-// 3. Create a way to retrieve employees from the employee database.
-// 4. Create a way to calculate the months worked. Using difference between start and current time.
-//    Then use moment.js formatting to set difference in months.
-// 5. Calculate Total billed
 
-// 1. Initialize Firebase
+// Initialize Firebase
  console.log("TOP OF FILE--------");
+ 
   var config = {
     apiKey: "AIzaSyAO60JcUqrbqBkRq94ib7VNWYYU_yLdVnM",
     authDomain: "train-project-bace0.firebaseapp.com",
@@ -31,7 +24,7 @@ var frequencyInput ="";
 
  console.log("right before click--------");
 
-// 2. Button for adding Trains
+// Button for adding Trains
 $("#addTrainBtn").on("click", function(event) {
   event.preventDefault();
 
@@ -56,14 +49,8 @@ $("#addTrainBtn").on("click", function(event) {
   // Uploads train data to the database
   database.ref().push(newTrain);
 
-  // Logs everything to console
-  console.log(newTrain.name);
-  console.log(newTrain.destination);
-  console.log(newTrain.firstTrain);
-  console.log(newTrain.frequency);
-
-
-
+  console.log(newTrain);
+  
   // Clears all of the text-boxes
   $("#trainNameInput").val("");
   $("#destinationInput").val("");
